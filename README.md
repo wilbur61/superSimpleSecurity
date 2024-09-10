@@ -17,5 +17,6 @@ see href in home page to enable clean logout
                 .password("{noop}123")
                 .roles("SUPERUSER")
                 .build();
-=================================================
+                <br>
+================================================= <br>
 RoleBased Branch implements Simple role based security
