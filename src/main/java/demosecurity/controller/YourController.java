@@ -1,5 +1,6 @@
 package demosecurity.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,6 +12,13 @@ public class YourController {
     public String showHome() {
 
         return "home";
+    }
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasRole('ADMIN')") // Only allow admins to access this method
+    public String adminPage() {
+        // ... admin specific logic
+        return "admin";
     }
 }
 /*  to do:  Vett this code:
